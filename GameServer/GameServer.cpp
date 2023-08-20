@@ -80,14 +80,7 @@ private:
 
 	int32 CalculateResult()
 	{	
-		/*for (int i = 0; i <= _size; i++)
-		{
-			cout << i << "(" << _primes[i] << ")  ";
-			if (i != 0 && i % 10 == 0)
-				cout << endl;
-		}*/
 		return accumulate(_primes.begin(), _primes.end(), 0);
-
 	}
 };
 
@@ -98,7 +91,7 @@ int main()
 	
 
 	Primes* prime = new Primes(MAX_NUMBER);
-	int32 result = prime->Find(10);
+	int32 result = prime->Find(thread::hardware_concurrency());
 
 	cout << result << endl;
 }
