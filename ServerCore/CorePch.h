@@ -5,6 +5,10 @@
 // 이미 pch가 있는데 새로 하나를 더 파는 이유는 , DummyClient, GameServer에서도 참조할 수 있게 만들기 위해서이다.
 
 #include "Types.h"
+#include "CoreGlobal.h"
+#include "CoreTLS.h"
+#include "CoreMacro.h"
+
 #include <vector>
 #include <list>
 #include <queue>
@@ -14,8 +18,11 @@
 #include <unordered_map>
 #include <unordered_set>
 
+#include <Windows.h>
 #include <iostream>
 using namespace std;
 
-void HelloWorld();
+#include "Lock.h"
+
+
 
